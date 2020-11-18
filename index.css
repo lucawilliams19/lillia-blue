@@ -7,7 +7,7 @@
 .background-img-pc{
     display: flex;
     height: 92vh;
-    background-image: url('./img/color-shift-background-horizontal.jpg');
+    background-image: url('./img/another-blue-cow-print.jpg');
     background-size: 100%;
     contain: content;
     z-index: -2;
@@ -24,14 +24,16 @@ nav{
     justify-content: space-around;
     align-items: center;
     min-height: 8vh;
-    background-color: rgb(164, 178, 243);
+    background-color: rgb(193, 208, 237);
     font-family: 'Poppin', sans-serif;
     font-style: italic;
-    color:  rgb(226, 226, 226);
+    color:  blanchedalmond;
+    text-shadow: 1px 0 0 rgb(77, 77, 77), 0 -1px 0 rgb(77, 77, 77), 0 1px 0 rgb(77, 77, 77), -1px 0 0 rgb(77, 77, 77);
+  
 }
 
 .logo{
-    color: rgb(226, 226, 226);
+    color: blanchedalmond;
     text-transform: uppercase;
     letter-spacing: 5px;
     font-size: 20px;
@@ -48,7 +50,8 @@ nav{
 }
 
 .nav-links a{
-    color: rgb(226, 226, 226);
+    /*color: rgb(226, 226, 226);*/
+    color: blanchedalmond;
     text-decoration: none;
     letter-spacing: 3px;
     font-weight: bold;
@@ -63,8 +66,9 @@ nav{
 .burger div{
     width: 25px;
     height: 3px;
-    background-color: rgb(226, 226, 226);
+    background-color: blanchedalmond;
     margin: 5px;
+    outline: #020202 solid 1px;
     transition: all 0.3s ease;
 }
 
@@ -83,16 +87,16 @@ nav{
         height: 100vh;
         background-image: url('./img/color-shift-background-vertical.jpg');
         background-size: 100%;
-        background-repeat: none
-        ;
+        background-repeat: none;
     }
+
     .nav-links{
         z-index: 100;
         position: absolute;
         right: 0px;
         height: 92vh;
         top: 8vh;
-        background-color: rgb(129, 149, 238);
+        background-color:rgb(193, 208, 237);
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -100,6 +104,7 @@ nav{
         transform: translateX(100%);
         transition: transform 0.5s ease-in;
     }
+
     .nav-links li{
         opacity: 0;
     }
@@ -132,4 +137,71 @@ nav{
 }
 .toggle .line3{
     transform: rotate(+45deg) translate(-5px,-6px);
+}
+
+.container{
+    width: 100%;
+    height: 92vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card-container{
+    width: 300px;
+    height: 300px;
+    
+}
+
+.card{
+    width: 100%;
+    height: 100%;
+    transition: transform 1s ease-in-out;
+    transform-style: preserve-3d;
+    background-image: url('./img/vintage-flower-fabric.jpg');
+    align-self: center;
+    justify-content: space-around;
+    font-family: 'Poppin', sans-serif;
+    font-style: italic;
+    color:  rgb(226, 226, 226);
+    text-shadow: 1px 0 0 rgb(77, 77, 77), 0 -1px 0 rgb(77, 77, 77), 0 1px 0 rgb(77, 77, 77), -1px 0 0 rgb(77, 77, 77);
+    text-align: center;
+}
+
+.card-container:hover .card{
+    transform: rotateY(180deg);
+} 
+.purchase{
+    cursor: pointer;
+    background-color: rgb(12, 12, 12);
+    border-radius: 3px;
+    border: none;
+    text-decoration: none;
+    padding: 15px, 32px;
+    font-family: 'Poppin', sans-serif;
+    font-style: italic;
+    color: blanchedalmond;
+    text-shadow: 1px 0 0 rgb(77, 77, 77), 0 -1px 0 rgb(77, 77, 77), 0 1px 0 rgb(77, 77, 77), -1px 0 0 rgb(77, 77, 77);
+   justify-self: center;
+   align-self: center;
+   justify-content: space-around;
+}
+
+.card figure{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    color: blanchedalmond;
+}
+
+.card .front{
+    background-image: url('./img/vintage-flower-fabric.jpg');
+}
+
+.card .back{
+    background-color: rgb(193, 208, 237);
+    transform: rotateY(180deg);
+    justify-content: center;
+    align-self: center;
+    align-content: center;
+    align-items: center;
 }
